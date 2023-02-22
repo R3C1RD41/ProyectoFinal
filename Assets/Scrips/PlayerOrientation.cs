@@ -5,7 +5,6 @@ using UnityEngine;
 public class PlayerOrientation : MonoBehaviour
 {
     public Rigidbody player;
-    //public float angle;
     public Camera mainCamara;
     // Start is called before the first frame update
     void Start()
@@ -14,7 +13,7 @@ public class PlayerOrientation : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         //transform.Translate(Vector3.right * Time.deltaTime
         // * Input.GetAxis("Horizontal"));
@@ -61,7 +60,6 @@ public class PlayerOrientation : MonoBehaviour
             Vector3 lookDireccion = mousePosition - screenPosition;
             float angle = Mathf.Atan2(lookDireccion.y, lookDireccion.x) * Mathf.Rad2Deg -180f;
             transform.rotation = Quaternion.Euler(new Vector3(0,-angle,0));
-            
         }
         
     }
