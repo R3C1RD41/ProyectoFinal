@@ -10,12 +10,19 @@ public class habilidades : MonoBehaviour
     public Transform BarreraLocation;
     public Transform orientacion;
     public PlayerDataSO playerData;
-    private int cont=0;
+    public LayerMask wallLayer;
+    private int cont = 0;
+
+    public Transform iniPocition;
+    public Transform endPocition;
+    public float radio;
+    public GameEvent noColocaBarrera;
+    public GameEvent colocaBarrera;
 
     // Update is called once per frame
     private void Start()
     {
-        tmpbarrera = new GameObject [3];
+        tmpbarrera = new GameObject[3];
     }
     void Update()
     {
@@ -23,20 +30,38 @@ public class habilidades : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Q))
             {
-                if (tmpbarrera[cont] != null)
+                //Debug.Log("Condicion" + obstaculo());
+                if (!obstaculo())
                 {
-                    Destroy(tmpbarrera[cont]);
+                    colocaBarrera.Raise();
+                    if (tmpbarrera[cont] != null)
+                    {
+                        Destroy(tmpbarrera[cont]);
+                    }
+                    tmpbarrera[cont] = Instantiate(barrera, BarreraLocation.position, Quaternion.identity);
+                    //tmpbarrera.transform.up = BarreraLocation.right;
+                    //tmpbarrera.transform.rotation = Quaternion.Euler(90, 0, 0);
+                    tmpbarrera[cont].transform.right = BarreraLocation.right;
+                    cont++;
+
+                    if (cont == 3)
+                    {
+                        cont = 0;
+                    }
                 }
-                tmpbarrera[cont] = Instantiate(barrera, BarreraLocation.position, Quaternion.identity);
-                //tmpbarrera.transform.up = BarreraLocation.right;
-                //tmpbarrera.transform.rotation = Quaternion.Euler(90, 0, 0);
-                tmpbarrera[cont].transform.right = BarreraLocation.right;
-                cont++;
+                else
+                {
+                    noColocaBarrera.Raise();
+                }
+
             }
-            if (cont == 3)
-            {
-                cont = 0;
-            }
-        } 
+                
+        }
+    }
+
+
+    public bool obstaculo()
+    {
+        return Physics.CheckCapsule(iniPocition.position,endPocition.position,radio,wallLayer);
     }
 }

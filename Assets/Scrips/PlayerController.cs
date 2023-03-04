@@ -19,16 +19,19 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        movement = Vector3.zero;
         if (playerData.playing)
         {
             //Movimiento
-            movement = Vector3.zero;
-            yVel = player.velocity.y;
+            //yVel = player.velocity.y;
             //transform.Translate(Vector3.forward * speed * Time.deltaTime
             //    * -Input.GetAxis("Vertical"));
             //transform.Translate(Vector3.right * speed * Time.deltaTime
             //    * -Input.GetAxis("Horizontal"));
-            movement.y = yVel;
+            //movement.x = -Input.GetAxis("Horizontal");
+            //movement.z = -Input.GetAxis("Vertical");
+            //Debug.Log("Movimiento :" + movement);
+            //movement.y = yVel;
             //player.velocity = movement;
 
             //Animaciones caminar
@@ -56,6 +59,7 @@ public class PlayerController : MonoBehaviour
             if (!Input.GetKey(KeyCode.D) && !Input.GetKey(KeyCode.W) && !Input.GetKey(KeyCode.S) && !Input.GetKey(KeyCode.A))
             {
                 playerAnimator.SetInteger("Caminar Pistola", 0);
+                player.velocity = new Vector3(0, 0, 0);
             }
             //Acciones
 
@@ -67,23 +71,25 @@ public class PlayerController : MonoBehaviour
                         playerOrientation.transform.right * 3,
                         ForceMode.Force
                         );*/
-                //playerOrientation.AddForce(playerOrientation.transform.right * 2,ForceMode.Force);
+                //playerOrientation.AddForce(playerOrientation.transform.right ,ForceMode.Force);
                 //playerOrientation.transform.Translate(Vector3.right * speed * 6 * Time.deltaTime);
             }
-            Move(movement);
+            //Move(movement);
         }  
     }
 
-    //protected void FixedUpdate()
-    //{
-    //    Move(movement);
-    //}
+    protected void FixedUpdate()
+    {
+        Move(movement);
+    }
 
     private void Move(Vector3 direction)
     {
-        transform.position += direction.normalized * speed * Time.deltaTime;
+        //transform.position += direction.normalized * speed * Time.deltaTime;
         //player.MovePosition(player.position + direction.normalized * speed * Time.fixedDeltaTime);
         //player.AddForce(direction.normalized * speed, ForceMode.Acceleration);
+        player.AddForce(direction.normalized * speed ,ForceMode.Acceleration);
+        
         //player.SimpleMove(direction.normalized * speed);
     }
 }
