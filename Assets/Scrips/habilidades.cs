@@ -9,6 +9,7 @@ public class habilidades : MonoBehaviour
     private GameObject[] tmpbarrera;
     public Transform BarreraLocation;
     public Transform orientacion;
+    public PlayerDataSO playerData;
     private int cont=0;
 
     // Update is called once per frame
@@ -18,21 +19,24 @@ public class habilidades : MonoBehaviour
     }
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (playerData.playing)
         {
-            if(tmpbarrera[cont] != null) 
+            if (Input.GetKeyDown(KeyCode.Q))
             {
-                Destroy(tmpbarrera[cont]);
+                if (tmpbarrera[cont] != null)
+                {
+                    Destroy(tmpbarrera[cont]);
+                }
+                tmpbarrera[cont] = Instantiate(barrera, BarreraLocation.position, Quaternion.identity);
+                //tmpbarrera.transform.up = BarreraLocation.right;
+                //tmpbarrera.transform.rotation = Quaternion.Euler(90, 0, 0);
+                tmpbarrera[cont].transform.right = BarreraLocation.right;
+                cont++;
             }
-            tmpbarrera[cont] = Instantiate(barrera,BarreraLocation.position, Quaternion.identity);
-            //tmpbarrera.transform.up = BarreraLocation.right;
-            //tmpbarrera.transform.rotation = Quaternion.Euler(90, 0, 0);
-            tmpbarrera[cont].transform.right = BarreraLocation.right;
-            cont++;
-        }
-        if (cont == 3)
-        {
-            cont = 0;
+            if (cont == 3)
+            {
+                cont = 0;
+            }
         } 
     }
 }
