@@ -7,28 +7,59 @@ using UnityEngine.Audio;
 
 public class UIManager : MonoBehaviour
 {
-    public GameObject panelPrincipal;
-    public GameObject panelPausa;
+    public GameObject   panelPrincipal;
+    public GameObject   panelPausa;
+    public GameObject   gameOver;
+    public Image        life;
+    public Image        qAbility;
+    public PlayerDataSO playerData;
+    //public GameEvent    gameOverPart2;
 
+    void Start()
+    {
+        CleanPanels();
+        ShowHUD();
+    }
+    private void CleanPanels()
+    {
+        panelPrincipal.SetActive(false);
+        panelPausa.SetActive(false);
+        gameOver.SetActive(false);
+    }
 
-    // Start is called before the first frame update
+    public void ShowHUD()
+    {
+        CleanPanels();
+        panelPrincipal.SetActive(true);
+    }
     public void continuar()
     {
         Time.timeScale = 1;
-        panelPausa.SetActive(false);
+        CleanPanels();
         panelPrincipal.SetActive(true);
     }
     public void pause()
     {
         Time.timeScale = 0;
+        CleanPanels();
         panelPausa.SetActive(true);
-        panelPrincipal.SetActive(false);
+    }
+
+    public void gameOverPanel()
+    {
+        StartCoroutine("gameoverWait");
     }
 
     // Update is called once per frame
-    private void DrawData()
+    public void DrawData()
     {
+        life.fillAmount = playerData.valueLife;
+    }
 
+    public void Qability()
+    {
+        qAbility.fillAmount = 0f;
+        StartCoroutine("wallWait");
     }
 
     public void salir()
@@ -36,13 +67,22 @@ public class UIManager : MonoBehaviour
         Application.Quit();
     }
 
-    private void OnEnable()
+    IEnumerator wallWait()
     {
-
+        yield return new WaitForSeconds(1f);
+        qAbility.fillAmount += 0.034f;
+        if (qAbility.fillAmount >= 1)
+            StopCoroutine("wallWait");
+        else
+            StartCoroutine("wallWait");
     }
 
-    private void OnDisable()
+    IEnumerator gameoverWait()
     {
-
+        yield return new WaitForSeconds(3f);
+        Time.timeScale = 0;
+        CleanPanels();
+        gameOver.SetActive(true);
+        //gameOverPart2.Raise();
     }
 }

@@ -4,9 +4,15 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    public GameObject decal;
-    private Vector3 delay;
-
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Enemy"))
+        {
+            //other.SendMessage("damage");
+            other.gameObject.SendMessage("damage");
+            Destroy(this.gameObject);
+        }
+    }
     void OnCollisionEnter(Collision collision)
     {
         Destroy(this.gameObject);

@@ -15,18 +15,6 @@ public class AudioManager : MonoBehaviour
     public AudioMixer mixer;
     public Slider sliderVolMusica;
     public Slider sliderSFX;
-
-
-    // Start is called before the first frame update
-    //void Awake()
-    //{
-    //    instanceAudio = this;
-    //}
-
-    private void Start()
-    {
-
-    }
     private void Update()
     {
         mixer.SetFloat("VolumeMusic", sliderVolMusica.value);
@@ -70,7 +58,6 @@ public class AudioManager : MonoBehaviour
         //    SFX.UnPause();
         //}
     }
-
     public void PlayMusic(int music)
     {
         musica.Pause();
@@ -87,8 +74,23 @@ public class AudioManager : MonoBehaviour
     {
         musica.UnPause();
     }
-    public void PlaySFX(int sfx)
+
+    public void enemyFire()
     {
-        SFX.PlayOneShot(sfxCollection[sfx]);
+        SFX.PlayOneShot(sfxCollection[0]);
+    }
+    public void enemyDead()
+    {
+        SFX.PlayOneShot(sfxCollection[1]);
+    }
+
+    public void playerDead()
+    {
+        SFX.PlayOneShot(sfxCollection[2]);
+    }
+
+    public void gameOver()
+    {
+        PlayMusic(1);
     }
 }

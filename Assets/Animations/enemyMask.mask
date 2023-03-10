@@ -1,0 +1,671 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!319 &31900000
+AvatarMask:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: enemyMask
+  m_Mask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+  m_Elements:
+  - m_Path: 
+    m_Weight: 1
+  - m_Path: PavoReal
+    m_Weight: 0
+  - m_Path: PavoReal/Box001
+    m_Weight: 0
+  - m_Path: PavoReal/Box002
+    m_Weight: 0
+  - m_Path: PavoReal/Box003
+    m_Weight: 0
+  - m_Path: PavoReal/Box004
+    m_Weight: 0
+  - m_Path: PavoReal/Box005
+    m_Weight: 0
+  - m_Path: PavoReal/Box006
+    m_Weight: 0
+  - m_Path: PavoReal/Box007
+    m_Weight: 0
+  - m_Path: PavoReal/Box008
+    m_Weight: 0
+  - m_Path: PavoReal/Box009
+    m_Weight: 0
+  - m_Path: PavoReal/Box010
+    m_Weight: 0
+  - m_Path: PavoReal/Box013
+    m_Weight: 0
+  - m_Path: PavoReal/Box014
+    m_Weight: 0
+  - m_Path: PavoReal/Box015
+    m_Weight: 0
+  - m_Path: PavoReal/Box016
+    m_Weight: 0
+  - m_Path: PavoReal/Box017
+    m_Weight: 0
+  - m_Path: PavoReal/Box018
+    m_Weight: 0
+  - m_Path: PavoReal/Box019
+    m_Weight: 0
+  - m_Path: PavoReal/Box020
+    m_Weight: 0
+  - m_Path: PavoReal/Box021
+    m_Weight: 0
+  - m_Path: PavoReal/Box022
+    m_Weight: 0
+  - m_Path: PavoReal/Box023
+    m_Weight: 0
+  - m_Path: PavoReal/Box024
+    m_Weight: 0
+  - m_Path: PavoReal/Box025
+    m_Weight: 0
+  - m_Path: PavoReal/Box026
+    m_Weight: 0
+  - m_Path: PavoReal/cola
+    m_Weight: 0
+  - m_Path: PavoReal/cola/cuerpo 1
+    m_Weight: 0
+  - m_Path: PavoReal/cola/cuerpo 1/cuerpo2
+    m_Weight: 0
+  - m_Path: PavoReal/cola/cuerpo 1/cuerpo2/ala der
+    m_Weight: 1
+  - m_Path: PavoReal/cola/cuerpo 1/cuerpo2/ala der/Bone019
+    m_Weight: 1
+  - m_Path: PavoReal/cola/cuerpo 1/cuerpo2/ala der/Bone019/Bone020
+    m_Weight: 1
+  - m_Path: PavoReal/cola/cuerpo 1/cuerpo2/ala der/Bone019/Bone020/Bone021
+    m_Weight: 1
+  - m_Path: PavoReal/cola/cuerpo 1/cuerpo2/ala izq
+    m_Weight: 1
+  - m_Path: PavoReal/cola/cuerpo 1/cuerpo2/ala izq/Bone015
+    m_Weight: 1
+  - m_Path: PavoReal/cola/cuerpo 1/cuerpo2/ala izq/Bone015/Bone016
+    m_Weight: 1
+  - m_Path: PavoReal/cola/cuerpo 1/cuerpo2/ala izq/Bone015/Bone016/Bone017
+    m_Weight: 1
+  - m_Path: PavoReal/cola/cuerpo 1/cuerpo2/cuerpo 3
+    m_Weight: 0
+  - m_Path: PavoReal/cola/cuerpo 1/cuerpo2/cuerpo 3/cuerpo4
+    m_Weight: 0
+  - m_Path: PavoReal/cola/cuerpo 1/cuerpo2/cuerpo 3/cuerpo4/cuello
+    m_Weight: 0
+  - m_Path: PavoReal/cola/cuerpo 1/cuerpo2/cuerpo 3/cuerpo4/cuello/cabeza
+    m_Weight: 0
+  - m_Path: PavoReal/cola/cuerpo 1/cuerpo2/cuerpo 3/cuerpo4/cuello/cabeza/Bone024
+    m_Weight: 0
+  - m_Path: PavoReal/cola/muslo der
+    m_Weight: 0
+  - m_Path: PavoReal/cola/muslo der/pierna der
+    m_Weight: 0
+  - m_Path: PavoReal/cola/muslo der/pierna der/Pata Der
+    m_Weight: 0
+  - m_Path: PavoReal/cola/muslo der/pierna der/Pata Der/Bone009
+    m_Weight: 0
+  - m_Path: PavoReal/cola/muslo izq
+    m_Weight: 0
+  - m_Path: PavoReal/cola/muslo izq/piernaizq
+    m_Weight: 0
+  - m_Path: PavoReal/cola/muslo izq/piernaizq/pata izq
+    m_Weight: 0
+  - m_Path: PavoReal/cola/muslo izq/piernaizq/pata izq/Bone005
+    m_Weight: 0
+  - m_Path: PavoReal/Cylinder 0
+    m_Weight: 0
+  - m_Path: PavoReal/Cylinder001
+    m_Weight: 0
+  - m_Path: PavoReal/Dummy001
+    m_Weight: 0
+  - m_Path: PavoReal/Dummy002
+    m_Weight: 0
+  - m_Path: PavoReal/Dummy003
+    m_Weight: 0
+  - m_Path: PavoReal/Dummy004
+    m_Weight: 0
+  - m_Path: PavoReal/Dummy005
+    m_Weight: 0
+  - m_Path: PavoReal/Dummy006
+    m_Weight: 0
+  - m_Path: PavoReal/Dummy007
+    m_Weight: 0
+  - m_Path: PavoReal/Dummy008
+    m_Weight: 0
+  - m_Path: PavoReal/Dummy009
+    m_Weight: 0
+  - m_Path: PavoReal/Dummy010
+    m_Weight: 0
+  - m_Path: PavoReal/Dummy011
+    m_Weight: 0
+  - m_Path: PavoReal/Pata_Der001
+    m_Weight: 0
+  - m_Path: PavoReal/Pata_Der002
+    m_Weight: 0
+  - m_Path: PavoReal/pCube3
+    m_Weight: 0
+  - m_Path: PavoReal/pCube3/transform1
+    m_Weight: 0
+  - m_Path: PavoReal/pCylinder3
+    m_Weight: 0
+  - m_Path: PavoReal/pCylinder3/transform23
+    m_Weight: 0
+  - m_Path: PavoReal/pCylinder13
+    m_Weight: 0
+  - m_Path: PavoReal/pCylinder13/transform5
+    m_Weight: 0
+  - m_Path: PavoReal/pCylinder14
+    m_Weight: 0
+  - m_Path: PavoReal/pCylinder14/transform3
+    m_Weight: 0
+  - m_Path: PavoReal/pCylinder15
+    m_Weight: 0
+  - m_Path: PavoReal/pCylinder15/transform2
+    m_Weight: 0
+  - m_Path: PavoReal/pHelix1
+    m_Weight: 0
+  - m_Path: PavoReal/pHelix1/transform4
+    m_Weight: 0
+  - m_Path: PavoReal/polySurface2
+    m_Weight: 0
+  - m_Path: PavoReal/polySurface2/transform26
+    m_Weight: 0
+  - m_Path: PavoReal/polySurface13
+    m_Weight: 0
+  - m_Path: PavoReal/polySurface13/polySurface14
+    m_Weight: 0
+  - m_Path: PavoReal/polySurface13/polySurface14/transform20
+    m_Weight: 0
+  - m_Path: PavoReal/polySurface13/polySurface16
+    m_Weight: 0
+  - m_Path: PavoReal/polySurface13/polySurface16/transform19
+    m_Weight: 0
+  - m_Path: PavoReal/polySurface13/polySurface17
+    m_Weight: 0
+  - m_Path: PavoReal/polySurface13/polySurface17/transform18
+    m_Weight: 0
+  - m_Path: PavoReal/polySurface21
+    m_Weight: 0
+  - m_Path: PavoReal/polySurface21/polySurface121
+    m_Weight: 0
+  - m_Path: PavoReal/polySurface21/polySurface121/transform16
+    m_Weight: 0
+  - m_Path: PavoReal/polySurface21/polySurface122
+    m_Weight: 0
+  - m_Path: PavoReal/polySurface21/polySurface122/transform15
+    m_Weight: 0
+  - m_Path: PavoReal/polySurface22
+    m_Weight: 0
+  - m_Path: PavoReal/polySurface22/polySurface108
+    m_Weight: 0
+  - m_Path: PavoReal/polySurface22/polySurface108/polySurface117
+    m_Weight: 0
+  - m_Path: PavoReal/polySurface22/polySurface108/polySurface117/transform14
+    m_Weight: 0
+  - m_Path: PavoReal/polySurface22/polySurface108/polySurface118
+    m_Weight: 0
+  - m_Path: PavoReal/polySurface22/polySurface108/polySurface118/transform13
+    m_Weight: 0
+  - m_Path: PavoReal/polySurface23
+    m_Weight: 0
+  - m_Path: PavoReal/polySurface23/transform12
+    m_Weight: 0
+  - m_Path: PavoReal/polySurface62
+    m_Weight: 0
+  - m_Path: PavoReal/polySurface62/polySurface104
+    m_Weight: 0
+  - m_Path: PavoReal/polySurface62/polySurface104/transform11
+    m_Weight: 0
+  - m_Path: PavoReal/polySurface62/polySurface105
+    m_Weight: 0
+  - m_Path: PavoReal/polySurface62/polySurface105/transform10
+    m_Weight: 0
+  - m_Path: PavoReal/polySurface106
+    m_Weight: 0
+  - m_Path: PavoReal/polySurface106/transform9
+    m_Weight: 0
+  - m_Path: PavoReal/polySurface112
+    m_Weight: 0
+  - m_Path: PavoReal/polySurface112/transform8
+    m_Weight: 0
+  - m_Path: PavoReal/polySurface115
+    m_Weight: 0
+  - m_Path: PavoReal/polySurface115/transform7
+    m_Weight: 0
+  - m_Path: PavoReal/polySurface116
+    m_Weight: 0
+  - m_Path: PavoReal/polySurface116/transform6
+    m_Weight: 0
+  - m_Path: PavoReal/polySurface123
+    m_Weight: 1
+  - m_Path: PavoReal/pPipe1
+    m_Weight: 0
+  - m_Path: PavoReal/pPipe1/transform27
+    m_Weight: 0
+  - m_Path: PavoReal/pPipe2
+    m_Weight: 0
+  - m_Path: PavoReal/pPipe2/transform25
+    m_Weight: 0
+  - m_Path: PavoReal/pSphere1
+    m_Weight: 0
+  - m_Path: PavoReal/pSphere1/transform24
+    m_Weight: 0
+  - m_Path: PavoReal/pSphere2
+    m_Weight: 0
+  - m_Path: PavoReal/pSphere2/transform22
+    m_Weight: 0
+  - m_Path: PavoReal/pSphere3
+    m_Weight: 0
+  - m_Path: PavoReal/pSphere3/transform21
+    m_Weight: 0
+  - m_Path: PavoReal/pSphere4
+    m_Weight: 0
+  - m_Path: PavoReal/pSphere4/transform17
+    m_Weight: 0
+  - m_Path: PavoReal/Sphere 000
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather001
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather002
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather003
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather004
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather005
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather006
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather007
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather008
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather009
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather010
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather011
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather012
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather013
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather014
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather015
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather016
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather017
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather018
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather019
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather020
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather021
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather022
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather023
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather024
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather025
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather026
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather027
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather028
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather029
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather030
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather031
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather032
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather033
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather034
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather035
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather036
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather037
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather038
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather039
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather040
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather041
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather042
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather043
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather044
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather045
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather046
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather047
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather048
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather049
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather050
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather051
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather052
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather053
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather054
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather055
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather056
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather057
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather058
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather059
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather060
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather061
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather062
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather063
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather064
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather065
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather066
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather067
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather068
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather069
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather070
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather071
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather072
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather073
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather074
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather075
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather076
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather077
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather078
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather079
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather080
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather081
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather082
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather083
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather084
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather085
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather086
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather087
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather088
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather089
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather090
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather091
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather092
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather093
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather094
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather095
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather096
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather097
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather098
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather099
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather100
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather101
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather102
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather103
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather104
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather105
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather106
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather107
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather108
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather109
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather110
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather111
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather112
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather113
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather114
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather115
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather116
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather117
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather118
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather119
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather120
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather121
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather122
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather123
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather124
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather125
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather126
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather127
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather128
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather129
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather130
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather131
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather132
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather133
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather134
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather135
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather136
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather137
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather138
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather139
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather140
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather141
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather142
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather143
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather144
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather145
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather146
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather147
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather148
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather149
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather150
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather151
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather152
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather153
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather154
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather155
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather156
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather157
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather158
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather159
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather160
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather161
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather162
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather163
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather164
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather165
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather166
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather167
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather168
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather169
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather170
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather171
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather172
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather173
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather174
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather175
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather176
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather177
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather178
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather179
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather180
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather181
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather182
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather183
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather184
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather185
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather186
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather187
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather188
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather189
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather190
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather191
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather192
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather193
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather194
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather195
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather196
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather197
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather198
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather199
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather200
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather201
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather202
+    m_Weight: 0
+  - m_Path: PavoReal/uploads_files_77929_feather203
+    m_Weight: 0

@@ -7,31 +7,10 @@ public class PlayerDataSO : ScriptableObject
     public int numVidas;
     public int numEnemigos;
     public float valueLife;
-    public bool playing = false;
-    public UnityEvent OnDataChange;
-
-    public void ChangeVidas(int change)
-    {
-        numVidas += change;
-        OnDataChange.Invoke();
-    }
-
-    public void ChangeEnemigos(int change)
-    {
-        numEnemigos += change;
-        OnDataChange.Invoke();
-    }
-
-    public void ChangeValueLife(float change)
-    {
-        valueLife += change;
-        if (valueLife < 0)
-        {
-            numVidas--;
-            valueLife = 1;
-        }
-        OnDataChange.Invoke();
-    }
+    public bool playing;
+    public bool gameOver;
+    public float damage;
+    public float wallLife;
 
     public void NoPlayin()
     {

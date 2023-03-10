@@ -14,8 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   numVidas: 0
   numEnemigos: 0
-  valueLife: 0
+  valueLife: 100
   playing: 1
+  damage: 25
+  wallLife: 50
   OnDataChange:
     m_PersistentCalls:
       m_Calls: []

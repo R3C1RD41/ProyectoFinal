@@ -12,6 +12,7 @@ public class habilidades : MonoBehaviour
     public PlayerDataSO playerData;
     public LayerMask wallLayer;
     private int cont = 0;
+    private bool wall;
 
     public Transform iniPocition;
     public Transform endPocition;
@@ -22,13 +23,14 @@ public class habilidades : MonoBehaviour
     // Update is called once per frame
     private void Start()
     {
+        wall = true;
         tmpbarrera = new GameObject[3];
     }
     void Update()
     {
         if (playerData.playing)
         {
-            if (Input.GetKeyDown(KeyCode.Q))
+            if (Input.GetKeyDown(KeyCode.Q) && wall)
             {
                 //Debug.Log("Condicion" + obstaculo());
                 if (!obstaculo())
@@ -48,6 +50,8 @@ public class habilidades : MonoBehaviour
                     {
                         cont = 0;
                     }
+                    wall = false;
+                    StartCoroutine("wallWait");
                 }
                 else
                 {
@@ -63,5 +67,11 @@ public class habilidades : MonoBehaviour
     public bool obstaculo()
     {
         return Physics.CheckCapsule(iniPocition.position,endPocition.position,radio,wallLayer);
+    }
+
+    IEnumerator wallWait()
+    {
+        yield return new WaitForSeconds(30f);
+        wall = true;
     }
 }
