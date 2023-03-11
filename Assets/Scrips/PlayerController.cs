@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
     private Vector3 movement;
     private float yVel;
     public PlayerDataSO playerData;
+    public Transform[] checkPoints;
     void Start()
     {
         player = GetComponent<Rigidbody>();
@@ -70,31 +71,32 @@ public class PlayerController : MonoBehaviour
             //Acciones
 
             ////Esquiva
-            
-            //Move(movement);
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                if (!playerAnimator.GetCurrentAnimatorStateInfo(0).IsName("rodar"))
+                {
+                    playerAnimator.SetTrigger("rodar");
+                    //player.AddForce(
+                    //        player.transform.right * 6,
+                    //        ForceMode.Impulse
+                    //        );
+                    playerPavo.layer = LayerMask.NameToLayer("invencible");
+                    StartCoroutine("dash");
+                    speed += 10;
+                }
+                //player.velocity = new Vector3(0, 0, 0);
+                //playerOrientation.AddForce(playerOrientation.transform.right ,ForceMode.Force);
+                //playerOrientation.transform.Translate(Vector3.right * speed * 6 * Time.deltaTime);
+            }
+            Move(movement);
         }  
     }
 
     protected void FixedUpdate()
     {
-        Move(movement);
+        //Move(movement);
 
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            if (!playerAnimator.GetCurrentAnimatorStateInfo(0).IsName("rodar"))
-            {
-                playerAnimator.SetTrigger("rodar");
-                player.AddForce(
-                        player.transform.right * 6,
-                        ForceMode.Impulse
-                        );
-                playerPavo.layer = LayerMask.NameToLayer("invencible");
-                StartCoroutine("dash");
-            }
-            //player.velocity = new Vector3(0, 0, 0);
-            //playerOrientation.AddForce(playerOrientation.transform.right ,ForceMode.Force);
-            //playerOrientation.transform.Translate(Vector3.right * speed * 6 * Time.deltaTime);
-        }
+        
     }
 
     private void Move(Vector3 direction)
@@ -102,8 +104,9 @@ public class PlayerController : MonoBehaviour
         //transform.position += direction.normalized * speed * Time.deltaTime;
         //player.MovePosition(player.position + direction.normalized * speed * Time.fixedDeltaTime);
         //player.AddForce(direction.normalized * speed, ForceMode.Acceleration);
-        player.AddForce(direction.normalized * speed ,ForceMode.Acceleration);
-        
+        //player.AddForce(direction.normalized * speed ,ForceMode.Acceleration);
+        player.velocity = direction.normalized * speed;
+
         //player.SimpleMove(direction.normalized * speed);
     }
 
@@ -120,11 +123,24 @@ public class PlayerController : MonoBehaviour
 
     public void muerteVida()
     {
-
+        playerData.playing = false;
+        playerAnimator.SetTrigger("dead");
+        playerPavo.layer = LayerMask.NameToLayer("invencible");
+        StartCoroutine("revive");
     }
     IEnumerator dash()
     {
         yield return new WaitForSeconds(0.5f);
         playerPavo.layer = LayerMask.NameToLayer("Player");
+        speed -= 10;
+    }
+
+    IEnumerator revive()
+    {
+        yield return new WaitForSeconds(3f);
+        playerAnimator.SetTrigger("revive");
+        playerPavo.layer = LayerMask.NameToLayer("Player");
+        player.transform.position = checkPoints[playerData.checkPointActual - 1].position;
+        playerData.playing = true;
     }
 }

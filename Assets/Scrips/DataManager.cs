@@ -8,30 +8,44 @@ public class DataManager : MonoBehaviour
     public EnemyData enemyData;
     public GameEvent drawUiEvent;
     public GameEvent GameOver;
+    public GameEvent LostLife;
     void Start()
     {
         playerData.valueLife = 1f;
         playerData.wallLife = 0.50f;
-        playerData.numVidas = 1;
+        playerData.numVidas = 3;
         playerData.damage = 0.25f;
         playerData.numEnemigos = 0;
         playerData.gameOver = false;
+        playerData.checkPointActual = 1;
         drawUiEvent.Raise();
     }
 
     public void RecieveDamageCommunPavo()
     {
         playerData.valueLife -= enemyData.damage;
+
         if (playerData.valueLife <= 0)
         {
             playerData.numVidas--;
         }
 
-        if (playerData.valueLife <= 0 && playerData.numVidas <= 0 && !playerData.gameOver)
+        if (playerData.valueLife <= 0 && playerData.numVidas < 0 && !playerData.gameOver)
         {
             GameOver.Raise();
         }
+
+        if(playerData.valueLife <= 0 && playerData.numVidas >= 0 && !playerData.gameOver)
+        {
+            LostLife.Raise();
+        }
+
         drawUiEvent.Raise();
     }
 
+    public void reaparecer()
+    {
+        playerData.valueLife = 1f;
+        drawUiEvent.Raise();
+    }
 }

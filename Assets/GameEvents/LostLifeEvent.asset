@@ -9,14 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84f18ba038fbbbf45a07363a6c909442, type: 3}
-  m_Name: PlayerData
+  m_Script: {fileID: 11500000, guid: aeef5baca40f63a459404d865809a1d5, type: 3}
+  m_Name: LostLifeEvent
   m_EditorClassIdentifier: 
-  numVidas: 0
-  numEnemigos: 0
-  valueLife: 100
-  playing: 1
-  gameOver: 0
-  damage: 25
-  wallLife: 50
-  checkPointActual: 0

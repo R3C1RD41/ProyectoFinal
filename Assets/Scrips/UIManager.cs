@@ -12,6 +12,7 @@ public class UIManager : MonoBehaviour
     public GameObject   gameOver;
     public Image        life;
     public Image        qAbility;
+    public Image[]      numLifes;
     public PlayerDataSO playerData;
     //public GameEvent    gameOverPart2;
 
@@ -54,8 +55,21 @@ public class UIManager : MonoBehaviour
     public void DrawData()
     {
         life.fillAmount = playerData.valueLife;
+        clearAndDrawLifes();
     }
 
+    public void clearAndDrawLifes()
+    {
+
+        for (int i = 0; i < 3; i++)
+        {
+            numLifes[i].gameObject.SetActive(false);
+        }
+        for (int i = 0; i < playerData.numVidas; i++)
+        {
+            numLifes[i].gameObject.SetActive(true);
+        }
+    }
     public void Qability()
     {
         qAbility.fillAmount = 0f;

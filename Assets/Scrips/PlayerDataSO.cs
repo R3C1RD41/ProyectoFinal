@@ -11,6 +11,7 @@ public class PlayerDataSO : ScriptableObject
     public bool gameOver;
     public float damage;
     public float wallLife;
+    public int checkPointActual;
 
     public void NoPlayin()
     {

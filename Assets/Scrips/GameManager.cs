@@ -10,7 +10,6 @@ public class GameManager : MonoBehaviour
     public GameEvent OnPauseEvent;
     public GameEvent OnPlayingEvent;
     public PlayerDataSO playerData;
-
     void Start()
     {
         currentState = GameState.ON_START;
@@ -55,6 +54,11 @@ public class GameManager : MonoBehaviour
     public void resetLv1()
     {
         SceneManager.LoadScene(0, LoadSceneMode.Single);
+    }
+
+    public void MainMenu()
+    {
+        SceneManager.LoadScene(1, LoadSceneMode.Single);
     }
 }
 
