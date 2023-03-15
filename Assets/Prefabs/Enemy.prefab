@@ -3860,6 +3860,8 @@ MonoBehaviour:
   deadTime: 0.9
   EnemyAnimator: {fileID: 0}
   bullet: {fileID: 6501332728392983377, guid: b6cb9481e23e12f4dbe71ff67897f098, type: 3}
+  lifeLoot: {fileID: 9159046814983432930, guid: 2e073e80fd43dc540b4156be74ebab65,
+    type: 3}
   player: {fileID: 0}
   bulletPoint: {fileID: 1309166667419438544}
   playerData: {fileID: 11400000, guid: f4b4d6d668c7925488f0a1463df64d89, type: 2}

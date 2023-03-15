@@ -12,6 +12,8 @@ public class habilidades : MonoBehaviour
     public PlayerDataSO playerData;
     public LayerMask wallLayer;
     private int cont = 0;
+    private bool timeStop;
+    private bool timeStopKey;
     private bool wall;
 
     public Transform iniPocition;
@@ -19,10 +21,13 @@ public class habilidades : MonoBehaviour
     public float radio;
     public GameEvent noColocaBarrera;
     public GameEvent colocaBarrera;
+    public GameEvent stopTime;
 
     // Update is called once per frame
     private void Start()
     {
+        timeStop = false;
+        timeStopKey = true;
         wall = true;
         tmpbarrera = new GameObject[3];
     }
@@ -59,7 +64,27 @@ public class habilidades : MonoBehaviour
                 }
 
             }
-                
+            if (Input.GetKey(KeyCode.LeftShift) && playerData.stopTimeHability > 0)
+            {
+                Time.timeScale = 0.5f;
+                if (!timeStop)
+                {
+                    StopCoroutine("stopTimeUp");
+                    StartCoroutine("stopTimeDown");
+                    timeStop = true;
+                }
+            }
+            if(playerData.stopTimeHability == 0)
+            {
+                Time.timeScale = 1;
+            }
+            if(Input.GetKeyUp(KeyCode.LeftShift))
+            {
+                timeStop = false;
+                StopCoroutine("stopTimeDown");
+                Time.timeScale = 1;
+                StartCoroutine("stopTimeUp");
+            }     
         }
     }
 
@@ -73,5 +98,25 @@ public class habilidades : MonoBehaviour
     {
         yield return new WaitForSeconds(30f);
         wall = true;
+    }
+
+    IEnumerator stopTimeDown()
+    {
+        yield return new WaitForSecondsRealtime(1f);
+        playerData.stopTimeHability -= 1;
+        if(playerData.stopTimeHability > 0)
+        {
+            StartCoroutine("stopTimeDown");
+        }
+    }
+
+    IEnumerator stopTimeUp()
+    {
+        yield return new WaitForSeconds(1f);
+        playerData.stopTimeHability += 1;
+        if(playerData.stopTimeHability < 30)
+        {
+            StartCoroutine("stopTimeUp");
+        }
     }
 }

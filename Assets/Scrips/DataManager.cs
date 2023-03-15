@@ -18,6 +18,7 @@ public class DataManager : MonoBehaviour
         playerData.numEnemigos = 0;
         playerData.gameOver = false;
         playerData.checkPointActual = 1;
+        playerData.stopTimeHability = 30;
         drawUiEvent.Raise();
     }
 

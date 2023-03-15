@@ -89,6 +89,16 @@ public class AudioManager : MonoBehaviour
         SFX.PlayOneShot(sfxCollection[2]);
     }
 
+    public void GeneradorDestruccion()
+    {
+        SFX.PlayOneShot(sfxCollection[3]);
+    }
+
+    public void Item()
+    {
+        SFX.PlayOneShot(sfxCollection[4]);
+    }
+
     public void gameOver()
     {
         PlayMusic(1);

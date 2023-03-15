@@ -18,15 +18,20 @@ public class enemyController : MonoBehaviour
     public Animator EnemyAnimator;
     public GameObject bullet;
     private GameObject tmpBullet;
+    public GameObject lifeLoot;
+    private GameObject tmpLifeLoot;
     public Transform player;
     public Transform bulletPoint;
     public PlayerDataSO playerData;
     private bool attack;
     private bool dead;
+    private int loot;
+
     // Start is called before the first frame update
     void Start()
     {
         life = 1;
+        loot = Random.Range(0, 2);
         enemyAgent = GetComponent<NavMeshAgent>();
         attack = false;
         dead = false;
@@ -107,6 +112,12 @@ public class enemyController : MonoBehaviour
         EnemyAnimator.SetTrigger("muerte");
         enemyDead.Raise();
         yield return new WaitForSeconds(deadTime);
+        if(loot == 0)
+        {
+            tmpLifeLoot = Instantiate(lifeLoot, this.transform.position,Quaternion.identity);
+            //tmpLifeLoot.transform.up = -this.transform.right;
+            tmpLifeLoot.transform.rotation = Quaternion.Euler(270,45,0);
+        }
         Destroy(this.gameObject);
     }
 

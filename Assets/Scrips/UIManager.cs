@@ -12,6 +12,7 @@ public class UIManager : MonoBehaviour
     public GameObject   gameOver;
     public Image        life;
     public Image        qAbility;
+    public Image        shiftAbility;
     public Image[]      numLifes;
     public PlayerDataSO playerData;
     //public GameEvent    gameOverPart2;
@@ -20,6 +21,7 @@ public class UIManager : MonoBehaviour
     {
         CleanPanels();
         ShowHUD();
+        StartCoroutine("shiftDraw");
     }
     private void CleanPanels()
     {
@@ -80,7 +82,12 @@ public class UIManager : MonoBehaviour
     {
         Application.Quit();
     }
-
+    IEnumerator shiftDraw()
+    {
+        yield return new WaitForSeconds(1f);
+        shiftAbility.fillAmount = playerData.stopTimeHability * 0.034f;
+        StartCoroutine("shiftDraw");
+    }
     IEnumerator wallWait()
     {
         yield return new WaitForSeconds(1f);
