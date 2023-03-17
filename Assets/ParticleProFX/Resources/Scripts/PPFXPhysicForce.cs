@@ -32,12 +32,12 @@ public class PPFXPhysicForce : MonoBehaviour {
 		
 		for(int i = 0; i < colliders.Length; i ++)
 		{
-			var _rb = colliders[i].GetComponent<Rigidbody>();
+			//var _rb = colliders[i].GetComponent<Rigidbody>();
 			
-			if(_rb != null)
-			{
-				colliders[i].GetComponent<Rigidbody>().AddExplosionForce(force, transform.position, radius, new Vector3(Random.Range(-3, 3),Random.Range(-3, 3),Random.Range(-3, 3)),ForceMode.Impulse);
-			}
+			//if(_rb != null)
+			//{
+			//	colliders[i].GetComponent<Rigidbody>().AddExplosionForce(force, transform.position, radius, new Vector3(Random.Range(-3, 3),Random.Range(-3, 3),Random.Range(-3, 3)),ForceMode.Impulse);
+			//}
 		}
 		
 		yield return null;

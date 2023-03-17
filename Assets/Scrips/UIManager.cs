@@ -10,6 +10,8 @@ public class UIManager : MonoBehaviour
     public GameObject   panelPrincipal;
     public GameObject   panelPausa;
     public GameObject   gameOver;
+    public GameObject   boss;
+    public GameObject   win;
     public Image        life;
     public Image        qAbility;
     public Image        shiftAbility;
@@ -34,6 +36,16 @@ public class UIManager : MonoBehaviour
     {
         CleanPanels();
         panelPrincipal.SetActive(true);
+    }
+
+    public void ShowBoss()
+    {
+        boss.SetActive(true);
+    }
+
+    public void ShowWin()
+    {
+        win.SetActive(true);
     }
     public void continuar()
     {

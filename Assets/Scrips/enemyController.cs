@@ -48,7 +48,7 @@ public class enemyController : MonoBehaviour
         {
             case States.IDLE:
                 enemyAgent.SetDestination(player.position);
-                if (Vector3.Distance(this.transform.position,player.position) < 10f)
+                if (Vector3.Distance(this.transform.position,player.position) < 12f)
                 {
                     StateActual = States.ATTACK;
                     attack = true;
@@ -57,7 +57,7 @@ public class enemyController : MonoBehaviour
             case States.MOVE:
                 enemyAgent.SetDestination(player.position);
                 this.transform.LookAt(player);
-                if (Vector3.Distance(this.transform.position, player.position) < 10f)
+                if (Vector3.Distance(this.transform.position, player.position) < 12f)
                 {
                     attack = true;
                     StateActual = States.ATTACK;

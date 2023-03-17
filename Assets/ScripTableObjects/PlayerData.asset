@@ -12,11 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84f18ba038fbbbf45a07363a6c909442, type: 3}
   m_Name: PlayerData
   m_EditorClassIdentifier: 
-  numVidas: 0
+  numVidas: 3
   numEnemigos: 0
-  valueLife: 100
+  valueLife: 1
   playing: 1
   gameOver: 0
-  damage: 25
-  wallLife: 50
-  checkPointActual: 0
+  damage: 0.25
+  wallLife: 1
+  checkPointActual: 1
+  stopTimeHability: 30

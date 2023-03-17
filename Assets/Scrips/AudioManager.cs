@@ -25,6 +25,21 @@ public class AudioManager : MonoBehaviour
     {
         PlayMusic(0);
     }
+
+    public void musicaEncierro()
+    {
+        PlayMusic(2);
+    }
+
+    public void musicaBoss1()
+    {
+        PlayMusic(3);
+    }
+
+    public void musicaWin()
+    {
+        PlayMusic(4);
+    }
     // Update is called once per frame
     public void PlaySFX(SFXType sfxType)
     {
@@ -97,6 +112,15 @@ public class AudioManager : MonoBehaviour
     public void Item()
     {
         SFX.PlayOneShot(sfxCollection[4]);
+    }
+
+    public void Confirmacion()
+    {
+        SFX.PlayOneShot(sfxCollection[5]);
+    }
+    public void turrent()
+    {
+        SFX.PlayOneShot(sfxCollection[6]);
     }
 
     public void gameOver()

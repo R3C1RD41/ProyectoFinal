@@ -68,7 +68,7 @@ public class MainMenuManager : MonoBehaviour
     public void toLV1()
     {
         if (nivel == 1)
-            SceneManager.LoadScene(0, LoadSceneMode.Single);
+            SceneManager.LoadScene(1, LoadSceneMode.Single);
     }
     public void Quit()
     {

@@ -10,8 +10,11 @@ public class GameManager : MonoBehaviour
     public GameEvent OnPauseEvent;
     public GameEvent OnPlayingEvent;
     public PlayerDataSO playerData;
+    public int eventoBarrera;
+    public GameObject[] barreraEntrada;
     void Start()
     {
+        eventoBarrera = 1;
         currentState = GameState.ON_START;
         Time.timeScale = 1;
         EvaluateState();
@@ -53,12 +56,28 @@ public class GameManager : MonoBehaviour
 
     public void resetLv1()
     {
-        SceneManager.LoadScene(0, LoadSceneMode.Single);
+        SceneManager.LoadScene(1, LoadSceneMode.Single);
     }
 
     public void MainMenu()
     {
-        SceneManager.LoadScene(1, LoadSceneMode.Single);
+        SceneManager.LoadScene(0, LoadSceneMode.Single);
+    }
+
+    public void deshabilitarBarrera()
+    {
+        if (eventoBarrera < 2)
+        {
+            barreraEntrada[1].SetActive(false);
+            barreraEntrada[3].SetActive(false);
+        }
+        else
+        {
+            barreraEntrada[0].SetActive(false);
+            barreraEntrada[2].SetActive(false);
+            barreraEntrada[4].SetActive(false);
+        }
+        eventoBarrera++;
     }
 }
 

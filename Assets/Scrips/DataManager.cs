@@ -12,7 +12,7 @@ public class DataManager : MonoBehaviour
     void Start()
     {
         playerData.valueLife = 1f;
-        playerData.wallLife = 0.50f;
+        playerData.wallLife = 1f;
         playerData.numVidas = 3;
         playerData.damage = 0.25f;
         playerData.numEnemigos = 0;
