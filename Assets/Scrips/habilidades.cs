@@ -22,10 +22,12 @@ public class habilidades : MonoBehaviour
     public GameEvent noColocaBarrera;
     public GameEvent colocaBarrera;
     public GameEvent stopTime;
+    public Material slowTimeMaterial;
 
     // Update is called once per frame
     private void Start()
     {
+        slowTimeMaterial.SetFloat("_FullScreenIntensity",0.0f);
         timeStop = false;
         timeStopKey = true;
         wall = true;
@@ -66,9 +68,10 @@ public class habilidades : MonoBehaviour
             }
             if (Input.GetKey(KeyCode.LeftShift) && playerData.stopTimeHability > 0)
             {
-                Time.timeScale = 0.5f;
+                Time.timeScale = 0.4f;
                 if (!timeStop)
                 {
+                    slowTimeMaterial.SetFloat("_FullScreenIntensity", 0.77f);
                     StopCoroutine("stopTimeUp");
                     StartCoroutine("stopTimeDown");
                     timeStop = true;
@@ -77,11 +80,13 @@ public class habilidades : MonoBehaviour
             if(playerData.stopTimeHability == 0)
             {
                 Time.timeScale = 1;
+                slowTimeMaterial.SetFloat("_FullScreenIntensity", 0.0f);
             }
             if(Input.GetKeyUp(KeyCode.LeftShift))
             {
                 timeStop = false;
                 StopCoroutine("stopTimeDown");
+                slowTimeMaterial.SetFloat("_FullScreenIntensity", 0.0f);
                 Time.timeScale = 1;
                 StartCoroutine("stopTimeUp");
             }     

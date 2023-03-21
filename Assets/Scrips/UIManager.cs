@@ -4,6 +4,8 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using UnityEngine.Audio;
+using System.IO;
+using TMPro;
 
 public class UIManager : MonoBehaviour
 {
@@ -17,6 +19,12 @@ public class UIManager : MonoBehaviour
     public Image        shiftAbility;
     public Image[]      numLifes;
     public PlayerDataSO playerData;
+    public RecordData   record;
+    public TextMeshProUGUI timeWin;
+    public PlayerData playerSave;
+    public float        timeInGame;
+    public string       filename;
+    private StreamWriter sw;
     //public GameEvent    gameOverPart2;
 
     void Start()
@@ -46,6 +54,41 @@ public class UIManager : MonoBehaviour
     public void ShowWin()
     {
         win.SetActive(true);
+        timeInGame = Time.realtimeSinceStartup;
+        if (timeInGame < record.record1 || record.record1 == 0)
+        {
+            record.record1 = timeInGame;
+            record.deads1 = playerData.numVidas;
+            record.kills1 = playerData.numEnemigos;
+            playerSave.record1 = timeInGame;
+            playerSave.deads1 = playerData.numVidas;
+            playerSave.kills1 = playerData.numEnemigos;
+        }
+        else if(timeInGame < record.record2 || record.record2 == 0) 
+        {
+            record.record2 = timeInGame;
+            record.deads2 = playerData.numVidas;
+            record.kills2 = playerData.numEnemigos;
+            playerSave.record2 = timeInGame;
+            playerSave.deads2 = playerData.numVidas;
+            playerSave.kills2 = playerData.numEnemigos;
+        }
+        else if(timeInGame < record.record3 || record.record3 == 0)
+        {
+            record.record3 = timeInGame;
+            record.deads3 = playerData.numVidas;
+            record.kills3 = playerData.numEnemigos;
+            playerSave.record3 = timeInGame;
+            playerSave.deads3 = playerData.numVidas;
+            playerSave.kills3 = playerData.numEnemigos;
+        }
+        sw = new StreamWriter(Application.persistentDataPath + "/data.json");
+        string objString = JsonUtility.ToJson(playerData);
+        //sw.WriteLine(objString);
+        File.WriteAllText(Application.dataPath + "/data.json", objString);
+        //sw.Close();
+        Debug.Log("Guardando...");
+        timeWin.text = "" + ((int)(timeInGame / 60)) + " : " + ((int)timeInGame % 60);
     }
     public void continuar()
     {
@@ -58,6 +101,7 @@ public class UIManager : MonoBehaviour
         Time.timeScale = 0;
         CleanPanels();
         panelPausa.SetActive(true);
+        //Debug.Log("tiempo: " + ((int)(Time.realtimeSinceStartup / 60)) + " : " + ((int)Time.realtimeSinceStartup % 60));
     }
 
     public void gameOverPanel()

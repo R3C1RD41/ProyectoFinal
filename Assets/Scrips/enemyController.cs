@@ -118,6 +118,7 @@ public class enemyController : MonoBehaviour
             //tmpLifeLoot.transform.up = -this.transform.right;
             tmpLifeLoot.transform.rotation = Quaternion.Euler(270,45,0);
         }
+        playerData.numEnemigos++;
         Destroy(this.gameObject);
     }
 

@@ -9,15 +9,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84f18ba038fbbbf45a07363a6c909442, type: 3}
-  m_Name: PlayerData
+  m_Script: {fileID: 11500000, guid: 71e8eb27190081a4eb0c490959c49cd5, type: 3}
+  m_Name: RecordData
   m_EditorClassIdentifier: 
-  numVidas: 3
-  numEnemigos: 2
-  valueLife: 0.9
-  playing: 1
-  gameOver: 0
-  damage: 20
-  wallLife: 1
-  checkPointActual: 4
-  stopTimeHability: 30
+  record1: 0
+  record2: 0
+  record3: 0
+  deads1: 0
+  deads2: 0
+  deads3: 0
+  kills1: 0
+  kills2: 0
+  kills3: 0

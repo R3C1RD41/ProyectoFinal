@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     public PlayerDataSO playerData;
     public int eventoBarrera;
     public GameObject[] barreraEntrada;
+
     void Start()
     {
         eventoBarrera = 1;

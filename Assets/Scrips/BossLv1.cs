@@ -17,11 +17,13 @@ public class BossLv1 : MonoBehaviour
     public GameEvent torretaSound;
     public GameEvent win;
     private bool torretaSoundCond;
+    private bool defeated;
     private Animator bossAnimator;
     public Transform[] fire;
     void Start()
     {
         torretaSoundCond = true;
+        defeated = false;
         bosslife.torreta1 = 20f;
         bosslife.puertas = 20f;
         bosslife.torreta2 = 20f;
@@ -44,16 +46,21 @@ public class BossLv1 : MonoBehaviour
             StopCoroutine("fireAttack");
         }
 
-        if(bosslife.torreta1 <= 0 && bosslife.torreta2 <= 0 && bosslife.puertas <= 0)
+        if(bosslife.torreta1 <= 0 && bosslife.torreta2 <= 0 && bosslife.puertas <= 0 && defeated == false)
         {
+            defeated = true;
             win.Raise();
+            Time.timeScale = 0;
+        }
+        if (bosslife.torreta1 <= 0 && bosslife.torreta2 <= 0 && bosslife.puertas <= 0)
+        {
             Time.timeScale = 0;
         }
     }
 
     IEnumerator attack()
     {
-        yield return new WaitForSeconds(20f);
+        yield return new WaitForSeconds(10f);
         bossAnimator.SetTrigger("movimiento");
         StartCoroutine("attack");
     }
