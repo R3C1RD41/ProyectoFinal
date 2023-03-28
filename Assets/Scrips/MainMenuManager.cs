@@ -60,7 +60,6 @@ public class MainMenuManager : MonoBehaviour
     {
         CleanImages();
         nivel234.gameObject.SetActive(true);
-        //nivel234.text = "En desarrollo";
         nivel = 2;
     }
 
@@ -132,12 +131,10 @@ public class MainMenuManager : MonoBehaviour
     public void LoadData()
     {
         playerData = new PlayerData();
-        if (File.Exists(Application.persistentDataPath + "/" + filename))
+        if (File.Exists(Application.dataPath + "/data.json"))
         {
-            sr = new StreamReader(Application.persistentDataPath + "/" + filename);
-            string objString = sr.ReadToEnd();
+            string objString = File.ReadAllText(Application.dataPath + "/data.json");
             playerData = JsonUtility.FromJson<PlayerData>(objString);
-            sr.Close();
             records.record1 = playerData.record1;
             records.record2 = playerData.record2;
             records.record3 = playerData.record3;

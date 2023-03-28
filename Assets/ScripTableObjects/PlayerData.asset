@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: PlayerData
   m_EditorClassIdentifier: 
   numVidas: 3
-  numEnemigos: 2
-  valueLife: 0.9
+  numEnemigos: 24
+  valueLife: 1
   playing: 1
   gameOver: 0
   damage: 20

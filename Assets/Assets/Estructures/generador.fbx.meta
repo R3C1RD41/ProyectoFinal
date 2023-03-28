@@ -3,7 +3,42 @@ guid: 5ddee6901f3ab1f4c999a1c8cc4af272
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Ligh2
+    second: {fileID: 2100000, guid: 643046f92ec5b7b4bbbb3106a57c5c3d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Ligh3
+    second: {fileID: 2100000, guid: 918ec976426228b44be24c59e4a1b7c0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Ligh4
+    second: {fileID: 2100000, guid: 850221370c35e414d8d41c9be5528748, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Ligh_
+    second: {fileID: 2100000, guid: 6f04f04c248676942810098b849e379c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal
+    second: {fileID: 2100000, guid: b011b6e50d369f74fa2fb884808442cf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Plastic1
+    second: {fileID: 2100000, guid: c26fda4ed7ab9c246880bd748aed8e0f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Plastic2
+    second: {fileID: 2100000, guid: 594bcf13a8e3014499f1e7d978a46ec6, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

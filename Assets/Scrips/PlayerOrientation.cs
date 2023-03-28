@@ -6,17 +6,13 @@ public class PlayerOrientation : MonoBehaviour
 {
     public Rigidbody player;
     public Camera mainCamara;
-    // Start is called before the first frame update
     void Start()
     {
         player = GetComponent<Rigidbody>();
     }
 
-    // Update is called once per frame
     void FixedUpdate()
     {
-        //transform.Translate(Vector3.right * Time.deltaTime
-        // * Input.GetAxis("Horizontal"));
         if (!Input.GetKey(KeyCode.Mouse1))
         {
             if (Input.GetKey(KeyCode.W))

@@ -97,7 +97,7 @@ public class LV1Events : MonoBehaviour
         yield return new WaitForSeconds(15f);
         evento6Count++;
         instanciarEnemigos(evento6);
-        if(evento6Count < 6)
+        if(evento6Count < 1)
             StartCoroutine("evento6Spawn");
         else
             StartCoroutine("evento6Part2");
@@ -105,7 +105,7 @@ public class LV1Events : MonoBehaviour
 
     IEnumerator evento6Part2()
     {
-        yield return new WaitForSeconds(20f);
+        yield return new WaitForSeconds(15f);
         encierro1[0].gameObject.SetActive(false);
         encierro1[1].gameObject.SetActive(false);
         evento6Musica.Raise();

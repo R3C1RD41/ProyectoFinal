@@ -27,7 +27,6 @@ public class enemyController : MonoBehaviour
     private bool dead;
     private int loot;
 
-    // Start is called before the first frame update
     void Start()
     {
         life = 1;
@@ -37,11 +36,9 @@ public class enemyController : MonoBehaviour
         dead = false;
         EnemyAnimator = GetComponentInChildren(typeof(Animator)) as Animator;
         player = GameObject.FindGameObjectWithTag("Player").transform;
-        //EnemyAnimator = this.GetComponent<Animator>();
         StateActual = States.IDLE;
     }
 
-    // Update is called once per frame
     void Update()
     {
         switch(StateActual)
@@ -86,7 +83,6 @@ public class enemyController : MonoBehaviour
                 }
                 break;
         }
-        //enemyAgent.SetDestination(player.position);
         EnemyAnimator.SetFloat("camina", enemyAgent.velocity.sqrMagnitude);
     }
 
@@ -115,7 +111,6 @@ public class enemyController : MonoBehaviour
         if(loot == 0)
         {
             tmpLifeLoot = Instantiate(lifeLoot, this.transform.position,Quaternion.identity);
-            //tmpLifeLoot.transform.up = -this.transform.right;
             tmpLifeLoot.transform.rotation = Quaternion.Euler(270,45,0);
         }
         playerData.numEnemigos++;

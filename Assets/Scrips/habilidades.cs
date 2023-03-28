@@ -13,7 +13,6 @@ public class habilidades : MonoBehaviour
     public LayerMask wallLayer;
     private int cont = 0;
     private bool timeStop;
-    private bool timeStopKey;
     private bool wall;
 
     public Transform iniPocition;
@@ -29,7 +28,6 @@ public class habilidades : MonoBehaviour
     {
         slowTimeMaterial.SetFloat("_FullScreenIntensity",0.0f);
         timeStop = false;
-        timeStopKey = true;
         wall = true;
         tmpbarrera = new GameObject[3];
     }
@@ -39,7 +37,6 @@ public class habilidades : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Q) && wall)
             {
-                //Debug.Log("Condicion" + obstaculo());
                 if (!obstaculo())
                 {
                     colocaBarrera.Raise();
@@ -48,8 +45,6 @@ public class habilidades : MonoBehaviour
                         Destroy(tmpbarrera[cont]);
                     }
                     tmpbarrera[cont] = Instantiate(barrera, BarreraLocation.position, Quaternion.identity);
-                    //tmpbarrera.transform.up = BarreraLocation.right;
-                    //tmpbarrera.transform.rotation = Quaternion.Euler(90, 0, 0);
                     tmpbarrera[cont].transform.right = BarreraLocation.right;
                     cont++;
 

@@ -7,7 +7,6 @@ using UnityEngine.Audio;
 public enum SFXType { JUMP, DAMAGE, DIE }
 public class AudioManager : MonoBehaviour
 {
-    //public static AudioManager instanceAudio;
     public AudioSource musica;
     public AudioSource SFX;
     public AudioClip[] musicCollection;
@@ -40,7 +39,6 @@ public class AudioManager : MonoBehaviour
     {
         PlayMusic(4);
     }
-    // Update is called once per frame
     public void PlaySFX(SFXType sfxType)
     {
         switch (sfxType)
@@ -55,23 +53,6 @@ public class AudioManager : MonoBehaviour
                 SFX.PlayOneShot(sfxCollection[0]);
                 break;
         }
-        //if (Input.GetKeyDown(KeyCode.A))
-        //{
-        //    musica.Play();
-        //    SFX.Play();
-        //}
-
-        //if (Input.GetKeyDown(KeyCode.B))
-        //{
-        //    musica.Pause();
-        //    SFX.Pause();
-        //}
-
-        //if (Input.GetKeyDown(KeyCode.D))
-        //{
-        //    musica.UnPause();
-        //    SFX.UnPause();
-        //}
     }
     public void PlayMusic(int music)
     {

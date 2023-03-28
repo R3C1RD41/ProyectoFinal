@@ -5,7 +5,6 @@ using TMPro;
 using UnityEngine.UI;
 using UnityEngine.Audio;
 using System.IO;
-using TMPro;
 
 public class UIManager : MonoBehaviour
 {
@@ -23,12 +22,13 @@ public class UIManager : MonoBehaviour
     public TextMeshProUGUI timeWin;
     public PlayerData playerSave;
     public float        timeInGame;
+    public float        InittimeInGame;
     public string       filename;
-    private StreamWriter sw;
-    //public GameEvent    gameOverPart2;
+
 
     void Start()
     {
+        InittimeInGame = Time.realtimeSinceStartup;
         CleanPanels();
         ShowHUD();
         StartCoroutine("shiftDraw");
@@ -54,7 +54,18 @@ public class UIManager : MonoBehaviour
     public void ShowWin()
     {
         win.SetActive(true);
-        timeInGame = Time.realtimeSinceStartup;
+        timeInGame = Time.realtimeSinceStartup - InittimeInGame;
+
+        playerSave.record1 = record.record1;
+        playerSave.deads1 = record.deads1;
+        playerSave.kills1 = record.kills1;
+        playerSave.record2 = record.record2;
+        playerSave.deads2 = record.deads2;
+        playerSave.kills2 = record.kills2;
+        playerSave.record3 = record.record3;
+        playerSave.deads3 = record.kills3;
+        playerSave.kills3 = record.kills3;
+
         if (timeInGame < record.record1 || record.record1 == 0)
         {
             record.record1 = timeInGame;
@@ -82,12 +93,9 @@ public class UIManager : MonoBehaviour
             playerSave.deads3 = playerData.numVidas;
             playerSave.kills3 = playerData.numEnemigos;
         }
-        sw = new StreamWriter(Application.persistentDataPath + "/data.json");
-        string objString = JsonUtility.ToJson(playerData);
-        //sw.WriteLine(objString);
+        
+        string objString = JsonUtility.ToJson(playerSave);
         File.WriteAllText(Application.dataPath + "/data.json", objString);
-        //sw.Close();
-        Debug.Log("Guardando...");
         timeWin.text = "" + ((int)(timeInGame / 60)) + " : " + ((int)timeInGame % 60);
     }
     public void continuar()
@@ -101,7 +109,6 @@ public class UIManager : MonoBehaviour
         Time.timeScale = 0;
         CleanPanels();
         panelPausa.SetActive(true);
-        //Debug.Log("tiempo: " + ((int)(Time.realtimeSinceStartup / 60)) + " : " + ((int)Time.realtimeSinceStartup % 60));
     }
 
     public void gameOverPanel()
@@ -109,7 +116,6 @@ public class UIManager : MonoBehaviour
         StartCoroutine("gameoverWait");
     }
 
-    // Update is called once per frame
     public void DrawData()
     {
         life.fillAmount = playerData.valueLife;
@@ -160,6 +166,5 @@ public class UIManager : MonoBehaviour
         Time.timeScale = 0;
         CleanPanels();
         gameOver.SetActive(true);
-        //gameOverPart2.Raise();
     }
 }

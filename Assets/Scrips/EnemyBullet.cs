@@ -13,13 +13,11 @@ public class EnemyBullet : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            //Debug.Log("daño jugador");
             damagePlayer.Raise();
 
         }
         if (collision.gameObject.CompareTag("PlayerWall"))
         {
-            //Debug.Log("daño barrera");
             wall = collision.gameObject;
             playerWallSC = wall.GetComponentInParent(typeof(playerWall)) as playerWall;
             playerWallSC.damage(enemyData.damage);

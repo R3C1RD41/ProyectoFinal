@@ -27,7 +27,6 @@ public class GeneradorLogica : MonoBehaviour
             if(life <= 0)
             {
                 tmpParticulas = Instantiate(particulas, position.position, Quaternion.identity);
-                //tmpParticulas.transform.up = position.up;
                 escudo.Raise();
                 Destroy(this.gameObject);
             }

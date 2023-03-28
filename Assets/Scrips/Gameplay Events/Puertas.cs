@@ -20,7 +20,7 @@ public class Puertas : MonoBehaviour
         {
             boss.puertas -= player.damage;
 
-            if(boss.puertas <= 5 && mitadDaño == false)
+            if(boss.puertas <= 10 && mitadDaño == false)
             {
                 bossAnimator.SetTrigger("daño 3");
                 mitadDaño = true;

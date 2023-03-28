@@ -29,18 +29,6 @@ public class PlayerController : MonoBehaviour
         movement = Vector3.zero;
         if (playerData.playing)
         {
-            //Movimiento
-            //yVel = player.velocity.y;
-            //transform.Translate(Vector3.forward * speed * Time.deltaTime
-            //    * -Input.GetAxis("Vertical"));
-            //transform.Translate(Vector3.right * speed * Time.deltaTime
-            //    * -Input.GetAxis("Horizontal"));
-            //movement.x = -Input.GetAxis("Horizontal");
-            //movement.z = -Input.GetAxis("Vertical");
-            //Debug.Log("Movimiento :" + movement);
-            //movement.y = yVel;
-            //player.velocity = movement;
-
             //Animaciones caminar
             if (Input.GetKey(KeyCode.W))
             {
@@ -106,7 +94,6 @@ public class PlayerController : MonoBehaviour
         //player.AddForce(direction.normalized * speed, ForceMode.Acceleration);
         //player.AddForce(direction.normalized * speed ,ForceMode.Acceleration);
         player.velocity = direction.normalized * speed;
-
         //player.SimpleMove(direction.normalized * speed);
     }
 

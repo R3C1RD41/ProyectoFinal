@@ -8,7 +8,6 @@ public class Bullet : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Enemy"))
         {
-            //other.SendMessage("damage");
             other.gameObject.SendMessage("damage");
             Destroy(this.gameObject);
         }

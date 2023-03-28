@@ -10,7 +10,6 @@ public class shoot : MonoBehaviour
     private GameObject tmpBullet;
     public PlayerDataSO playerData;
 
-    // Update is called once per frame
     private void Start()
     {
         playerAnimator = GetComponent<Animator>();
@@ -39,6 +38,5 @@ public class shoot : MonoBehaviour
             ForceMode.VelocityChange
             );
         OnStartEvent.Raise();
-        //tmpBullet.transform.position = originBullet.position;
     }
 }
